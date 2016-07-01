@@ -91,10 +91,9 @@ class ViewController: UIViewController {
             snowView.hidden = !data.showWeatherEffects
         }
     
-    
     // schedule next flight
     delay(seconds: 3.0) {
-      self.changeFlightDataTo(data.isTakingOff ? parisToRome : londonToParis)
+      self.changeFlightDataTo(data.isTakingOff ? parisToRome : londonToParis, animated: true)
     }
   }
   
