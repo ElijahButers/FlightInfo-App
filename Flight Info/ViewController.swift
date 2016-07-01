@@ -74,7 +74,7 @@ class ViewController: UIViewController {
   
   //MARK: custom methods
   
-  func changeFlightDataTo(data: FlightData) {
+    func changeFlightDataTo(data: FlightData, animated: Bool = false)   {
     
     // populate the UI with the next flight's data
     summary.text = data.summary
@@ -83,8 +83,14 @@ class ViewController: UIViewController {
     departingFrom.text = data.departingFrom
     arrivingTo.text = data.arrivingTo
     flightStatus.text = data.flightStatus
-    bgImageView.image = UIImage(named: data.weatherImageName)
-    snowView.hidden = !data.showWeatherEffects
+        
+        if animated {
+            fadeImageView(bgImageView, toImage: UIImage(named: data.weatherImageName)!, showEffects: data.showWeatherEffects)
+        } else {
+            bgImageView.image = UIImage(named: data.weatherImageName)
+            snowView.hidden = !data.showWeatherEffects
+        }
+    
     
     // schedule next flight
     delay(seconds: 3.0) {
