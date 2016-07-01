@@ -92,5 +92,15 @@ class ViewController: UIViewController {
     }
   }
   
+    func fadeImageView(imageView: UIImageView, toImage: UIImage, showEffects: Bool) {
+        
+        UIView.transitionWithView(imageView, duration: 1.0, options: .TransitionCrossDissolve, animations: {
+            imageView.image = toImage
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.snowView.alpha = showEffects ? 1.0 : 0.0
+            }, completion: nil)
+    }
   
 }
