@@ -121,6 +121,12 @@ class ViewController: UIViewController {
         auxLabel.textAlignment = label.textAlignment
         auxLabel.textColor = label.textColor
         auxLabel.backgroundColor = label.backgroundColor
+        
+        let auxLabelOffset = CGFloat(direction.rawValue) * label.frame.size.height / 2.0
+        
+        auxLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.1), CGAffineTransformMakeTranslation(0.0, auxLabelOffset))
+        
+        label.superview!.addSubview(auxLabel)
     }
   
 }
