@@ -107,5 +107,10 @@ class ViewController: UIViewController {
             self.snowView.alpha = showEffects ? 1.0 : 0.0
             }, completion: nil)
     }
+    
+    enum animationDirection: Int {
+        case Positive = 1
+        case Negative = -1
+    }
   
 }
