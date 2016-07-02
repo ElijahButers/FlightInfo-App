@@ -108,9 +108,19 @@ class ViewController: UIViewController {
             }, completion: nil)
     }
     
-    enum animationDirection: Int {
+    enum AnimationDirection: Int {
         case Positive = 1
         case Negative = -1
+    }
+    
+    func cubeTransition(label label: UILabel, text: String, direction: AnimationDirection) {
+        
+        let auxLabel = UILabel(frame: label.frame)
+        auxLabel.text = text
+        auxLabel.font = label.font
+        auxLabel.textAlignment = label.textAlignment
+        auxLabel.textColor = label.textColor
+        auxLabel.backgroundColor = label.backgroundColor
     }
   
 }
