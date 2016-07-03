@@ -142,5 +142,19 @@ class ViewController: UIViewController {
                 auxLabel.removeFromSuperview()
         })
     }
+    
+    func moveLabel(label: UILabel, text: String, offset: CGPoint) {
+        
+        let auxLabel = UILabel(frame: label.frame)
+        auxLabel.text = text
+        auxLabel.font = label.font
+        auxLabel.textAlignment = label.textAlignment
+        auxLabel.textColor = label.textColor
+        auxLabel.backgroundColor = label.backgroundColor
+        
+        auxLabel.transform = CGAffineTransformMakeTranslation(offset.x, offset.y)
+        auxLabel.alpha = 0
+        view.addSubview(auxLabel)
+    }
   
 }
