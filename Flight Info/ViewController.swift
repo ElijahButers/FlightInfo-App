@@ -78,11 +78,6 @@ class ViewController: UIViewController {
     
     // populate the UI with the next flight's data
     summary.text = data.summary
-    flightNr.text = data.flightNr
-    gateNr.text = data.gateNr
-    departingFrom.text = data.departingFrom
-    arrivingTo.text = data.arrivingTo
-    flightStatus.text = data.flightStatus
         
         if animated {
             fadeImageView(bgImageView, toImage: UIImage(named: data.weatherImageName)!, showEffects: data.showWeatherEffects)
@@ -93,6 +88,12 @@ class ViewController: UIViewController {
         } else {
             bgImageView.image = UIImage(named: data.weatherImageName)
             snowView.hidden = !data.showWeatherEffects
+            
+            flightNr.text = data.flightNr
+            gateNr.text = data.gateNr
+            departingFrom.text = data.departingFrom
+            arrivingTo.text = data.arrivingTo
+            flightStatus.text = data.flightStatus
         }
     
     // schedule next flight
