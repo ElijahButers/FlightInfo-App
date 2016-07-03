@@ -160,6 +160,12 @@ class ViewController: UIViewController {
             label.transform = CGAffineTransformMakeTranslation(offset.x, offset.y)
             label.alpha = 0.0
             }, completion: nil)
+        UIView.animateWithDuration(0.25, delay: 0.1, options: .CurveEaseOut, animations: {
+            auxLabel.transform = CGAffineTransformIdentity
+            auxLabel.alpha = 1.0
+            }, completion: {_ in
+            //
+        })
     }
   
 }
