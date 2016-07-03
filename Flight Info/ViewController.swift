@@ -86,6 +86,10 @@ class ViewController: UIViewController {
         
         if animated {
             fadeImageView(bgImageView, toImage: UIImage(named: data.weatherImageName)!, showEffects: data.showWeatherEffects)
+            
+            let direction: AnimationDirection = data.isTakingOff ? .Positive : .Negative
+            cubeTransition(label: flightNr, text: data.flightNr, direction: direction)
+            cubeTransition(label: gateNr, text: data.gateNr, direction: direction)
         } else {
             bgImageView.image = UIImage(named: data.weatherImageName)
             snowView.hidden = !data.showWeatherEffects
