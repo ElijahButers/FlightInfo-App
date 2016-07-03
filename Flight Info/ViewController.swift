@@ -155,6 +155,11 @@ class ViewController: UIViewController {
         auxLabel.transform = CGAffineTransformMakeTranslation(offset.x, offset.y)
         auxLabel.alpha = 0
         view.addSubview(auxLabel)
+        
+        UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseIn, animations: {
+            label.transform = CGAffineTransformMakeTranslation(offset.x, offset.y)
+            label.alpha = 0.0
+            }, completion: nil)
     }
   
 }
