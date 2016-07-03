@@ -127,6 +127,15 @@ class ViewController: UIViewController {
         auxLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.1), CGAffineTransformMakeTranslation(0.0, auxLabelOffset))
         
         label.superview!.addSubview(auxLabel)
+        
+        UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: {
+            auxLabel.transform = CGAffineTransformIdentity
+            label.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.1), CGAffineTransformMakeTranslation(0.0, -auxLabelOffset))
+            }, completion: {_ in
+                label.text = auxLabel.text
+                label.transform = CGAffineTransformIdentity
+                auxLabel.removeFromSuperview()
+        })
     }
   
 }
