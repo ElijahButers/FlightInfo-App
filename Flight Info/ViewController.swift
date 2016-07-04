@@ -191,6 +191,9 @@ class ViewController: UIViewController {
                 self.planeImage.center.x += 80.0
                 self.planeImage.center.y += 10.0
             })
+            UIView.addKeyframeWithRelativeStartTime(0.1, relativeDuration: 0.4, animations: {
+                self.planeImage.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_4/2))
+            })
             }, completion: nil)
     }
   
