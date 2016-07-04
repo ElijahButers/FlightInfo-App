@@ -203,7 +203,10 @@ class ViewController: UIViewController {
                 self.planeImage.transform = CGAffineTransformIdentity
                 self.planeImage.center = CGPoint(x: 0.0, y: originalCenter.y)
             })
-            
+            UIView.addKeyframeWithRelativeStartTime(0.55, relativeDuration: 0.45, animations: {
+                self.planeImage.alpha = 1.0
+                self.planeImage.center = originalCenter
+            })
             }, completion: nil)
     }
   
