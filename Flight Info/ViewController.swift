@@ -179,5 +179,14 @@ class ViewController: UIViewController {
             label.transform = CGAffineTransformIdentity
         })
     }
+    
+    func planeDepart() {
+        
+        let originalCenter = planeImage.center
+        
+        UIView.animateKeyframesWithDuration(1.5, delay: 0.0, options: [], animations: {
+            //
+            }, completion: nil)
+    }
   
 }
