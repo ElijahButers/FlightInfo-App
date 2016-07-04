@@ -209,5 +209,12 @@ class ViewController: UIViewController {
             })
             }, completion: nil)
     }
+    
+    func summarySwitchTo(summaryText: String) {
+        
+        UIView.animateKeyframesWithDuration(1.5, delay: 0.0, options: [], animations: {
+            //
+            }, completion: nil)
+    }
   
 }
