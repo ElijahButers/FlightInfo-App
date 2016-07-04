@@ -187,7 +187,10 @@ class ViewController: UIViewController {
         let originalCenter = planeImage.center
         
         UIView.animateKeyframesWithDuration(1.5, delay: 0.0, options: [], animations: {
-            //
+            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.25, animations: {
+                self.planeImage.center.x += 80.0
+                self.planeImage.center.y += 10.0
+            })
             }, completion: nil)
     }
   
