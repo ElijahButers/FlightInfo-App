@@ -85,6 +85,12 @@ class ViewController: UIViewController {
             let direction: AnimationDirection = data.isTakingOff ? .Positive : .Negative
             cubeTransition(label: flightNr, text: data.flightNr, direction: direction)
             cubeTransition(label: gateNr, text: data.gateNr, direction: direction)
+            
+            let offsetDeparting = CGPoint(x: CGFloat(direction.rawValue * 80), y: 0.0)
+            moveLabel(departingFrom, text: data.departingFrom, offset: offsetDeparting)
+            
+            let offsetArriving = CGPoint(x: 0.0, y: CGFloat(direction.rawValue * 50))
+            moveLabel(arrivingTo, text: data.arrivingTo, offset: offsetArriving)
         } else {
             bgImageView.image = UIImage(named: data.weatherImageName)
             snowView.hidden = !data.showWeatherEffects
