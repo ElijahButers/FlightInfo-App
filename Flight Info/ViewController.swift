@@ -213,7 +213,9 @@ class ViewController: UIViewController {
     func summarySwitchTo(summaryText: String) {
         
         UIView.animateKeyframesWithDuration(1.5, delay: 0.0, options: [], animations: {
-            //
+            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.45, animations: {
+                self.summary.center.y -= 100.0
+            })
             }, completion: nil)
     }
   
