@@ -220,6 +220,9 @@ class ViewController: UIViewController {
                 self.summary.center.y += 100.0
             })
             }, completion: nil)
+        delay(seconds: 0.5, completion: {
+            self.summary.text = summaryText
+        })
     }
   
 }
