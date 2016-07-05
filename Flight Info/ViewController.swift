@@ -77,7 +77,6 @@ class ViewController: UIViewController {
     func changeFlightDataTo(data: FlightData, animated: Bool = false)   {
     
     // populate the UI with the next flight's data
-    summary.text = data.summary
         
         if animated {
             fadeImageView(bgImageView, toImage: UIImage(named: data.weatherImageName)!, showEffects: data.showWeatherEffects)
@@ -105,6 +104,7 @@ class ViewController: UIViewController {
             departingFrom.text = data.departingFrom
             arrivingTo.text = data.arrivingTo
             flightStatus.text = data.flightStatus
+            summary.text = data.summary
         }
     
     // schedule next flight
