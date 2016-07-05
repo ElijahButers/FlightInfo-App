@@ -95,6 +95,7 @@ class ViewController: UIViewController {
             cubeTransition(label: flightStatus, text: data.flightStatus, direction: direction)
             
             planeDepart()
+            summarySwitchTo(data.summary)
         } else {
             bgImageView.image = UIImage(named: data.weatherImageName)
             snowView.hidden = !data.showWeatherEffects
