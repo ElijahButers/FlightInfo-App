@@ -216,6 +216,9 @@ class ViewController: UIViewController {
             UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.45, animations: {
                 self.summary.center.y -= 100.0
             })
+            UIView.addKeyframeWithRelativeStartTime(0.5, relativeDuration: 0.5, animations: {
+                self.summary.center.y += 100.0
+            })
             }, completion: nil)
     }
   
